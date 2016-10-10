@@ -1,0 +1,12 @@
+$screen-sizes: (
+    xs: 480px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+@mixin media-q($screen: md, $type: min) {
+    @media screen and (#{$type}-width: map-get($screen-sizes, $screen)) {
+        @content;
+    }
+}

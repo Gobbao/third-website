@@ -1,0 +1,62 @@
+.menu {
+    height:50px;
+    width: 50px;
+
+    position: fixed;
+    z-index: 1000;
+    top: 10px;
+    right: 10px;
+
+    background: rgba($color-white--base, 0.5);
+
+    &__bar {
+        height: 2px;
+        width: 30px;
+
+        position: absolute;
+
+        content: '';
+        background: $color-grey--dark;
+
+        transition: transform .5s linear;
+        transition-delay: 0.6s;
+    }
+
+    &__content {
+        @extend .menu__bar;
+        top: 23px;
+        left: 10px;
+
+        transition: background .5s linear;
+        transition-delay: 0.6s;
+
+        &:before {
+            @extend .menu__bar;
+            transform: translateY(-350%);
+        }
+
+        &:after {
+            @extend .menu__bar;
+            transform: translateY(350%);
+        }
+    }
+
+    &--opened {
+        z-index: 1000;
+
+        .menu__content {
+            transition-delay: 0s;
+            background: rgba($color-white--base, 0.0);
+
+            &:before {
+                transition-delay: inherit;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transition-delay: inherit;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
