@@ -19,6 +19,75 @@ a {
   a:hover {
     color: inherit; }
 
+@keyframes logo {
+  to {
+    transform: translateX(400%) rotate(720deg) scale(4, 4); } }
+
+@keyframes logo__title {
+  to {
+    opacity: 1; } }
+
+@keyframes logo__path {
+  to {
+    stroke-dashoffset: 0; } }
+
+.block__content__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.grid {
+  margin-top: 30px;
+  padding: 0 1.25em; }
+  .grid > :nth-child(1) {
+    background: url("/images/pic1.jpg");
+    background-size: 100%;
+    margin-top: 20px; }
+  .grid > :nth-child(2) {
+    background: url("/images/pic2.jpg");
+    background-size: 100%;
+    margin-top: 20px; }
+
+.header {
+  padding: 0 1.25em;
+  color: #585858; }
+  .header__logo {
+    padding-top: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+    .header__logo__img {
+      height: 30px;
+      width: 30px;
+      animation: logo 2s ease-in;
+      animation-fill-mode: forwards; }
+      .header__logo__img .gem__path {
+        fill: #585858;
+        stroke: #fff;
+        stroke-width: 3;
+        stroke-dasharray: 230;
+        stroke-dashoffset: 220;
+        animation: logo__path 2s 1s ease-out forwards; }
+    .header__logo__title {
+      font-weight: 900;
+      letter-spacing: 0.35em;
+      text-align: center;
+      opacity: 0;
+      padding-top: 3.5em;
+      width: 100%;
+      animation: logo__title 1s 2s linear forwards; }
+  .header__title {
+    font-size: 0.95em;
+    text-align: justify;
+    padding-top: 1em; }
+    .header__title__link {
+      border-bottom: 1px dotted #585858; }
+  .header__text {
+    padding-top: 1em;
+    text-align: justify; }
+
 .menu {
   height: 50px;
   width: 50px;

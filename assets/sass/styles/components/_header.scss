@@ -1,0 +1,67 @@
+.header {
+    padding: 0 1.25em;
+
+    color: $color-grey--dark;
+
+    &__logo {
+        padding-top: 5em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        &__img {
+            height: 30px;
+            width: 30px;
+
+            animation: logo 2s ease-in;
+            animation-fill-mode: forwards;
+
+            .gem {
+                &__polygon {
+
+                }
+
+                &__path {
+                    fill: $color-grey--dark;
+                    stroke: $color-white--base;
+                    stroke-width: 3;
+                    stroke-dasharray: 230;
+                    stroke-dashoffset: 220;
+
+                    animation: logo__path 2s 1s ease-out forwards;
+                }
+            }
+        }
+
+        &__title {
+            font-weight: 900;
+            letter-spacing: 0.35em;
+            text-align: center;
+            opacity: 0;
+
+            padding-top: 3.5em;
+            width: 100%;
+
+            animation: logo__title 1s 2s linear forwards;
+        }
+    }
+
+    &__title {
+        font-size: 0.95em;
+        text-align: justify;
+
+        padding-top: 1em;
+
+        &__link {
+            border-bottom: 1px dotted $color-grey--dark;
+        }
+    }
+
+    &__text {
+        padding-top: 1em;
+
+        text-align: justify;
+    }
+}

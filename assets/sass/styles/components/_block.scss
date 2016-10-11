@@ -1,0 +1,18 @@
+.block {
+    &__content {
+        &__link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__title {
+
+            }
+
+            &__text {
+
+            }
+        }
+    }
+}
